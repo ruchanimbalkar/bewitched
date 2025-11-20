@@ -19,14 +19,13 @@ body {
 header{
   display: flex;
   flex-direction: row;
-  flex-wrap: row wrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: flex-start;
   margin: 1rem;
   padding-top: 0.1rem;
   padding-bottom: 1rem;
-  position: fixed;
 }
 
 .logo-h1{

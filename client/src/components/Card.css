@@ -1,5 +1,5 @@
 .card {
-  border: 0.6rem double var(--color-violet-blue);
+  border: 0.6rem double var(--color-purple);
   background-color: var(--color-lav-blue);
   margin: 1rem;
   padding: 1rem;
@@ -9,11 +9,11 @@
 }
 .card:hover {
   border: thick double var(--color-lavender);
-  font-family: "Style Script", cursive;
+  font-family: "Updock", cursive;
   font-weight: 400;
   font-style: normal;
 }
 
-.ccard h2 {
+.card h3 {
   text-decoration: underline overline;
 }
