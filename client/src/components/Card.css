@@ -1,6 +1,6 @@
 .card {
-  border: 0.6rem double var(--color-purple);
-  background-color: var(--color-lav-blue);
+  border: 0.6rem double var(--color-lav-blue);
+  background-color: var(--background-color2);
   margin: 1rem;
   padding: 1rem;
   display: flex;
@@ -8,7 +8,7 @@
   flex-flow: column;
 }
 .card:hover {
-  border: thick double var(--color-lavender);
+  border: thick double var(--font-color3);
   font-family: "Updock", cursive;
   font-weight: 400;
   font-style: normal;
@@ -16,4 +16,8 @@
 
 .card h3 {
   text-decoration: underline overline;
+}
+
+p {
+  color: var(--color-lavender);
 }
