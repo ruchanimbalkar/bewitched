@@ -1,0 +1,73 @@
+:root {
+  font-family: "Style Script", cursive;
+
+  --background-color: #1755ba;
+  --font-color-1: #8EB9DC;
+  --font-color-2: #6787B0;
+  --color-purple : #3F135A;
+  --color-lavender : #8C76B3;
+  --color-violet-blue : #646cff
+  --color-lav-blue : #535bf2;
+
+}
+
+
+body {
+  background-color: var(--background-color);
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  margin: 1rem;
+  padding-top: 0.1rem;
+  padding-bottom: 1rem;
+  position: fixed;
+}
+
+.logo-h1{
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  color:var(--font-color-1);
+  font-size: 1.5rem;
+}
+
+.logo-h1 img{
+  max-width: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-div nav ul{
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  padding :0;
+  margin: 0;
+}
+
+
+.nav-div nav ul li a{
+  color:var(--color-purple);
+  font-size: 1.1rem;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.nav-div nav ul li a:hover{
+  color:var(--color-lavender);
+}
+
+main{
+  text-align: center;
+  margin-top: 1rem;
+}
