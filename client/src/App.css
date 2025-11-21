@@ -1,1 +1,17 @@
+main {
+  padding: 1rem;
+}
 
+.characters-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.home-div h2 {
+  color: var(--font-color3);
+}
+
+.home-div p {
+  color: var(--font-color-1);
+  font-size: 1.3rem;
+}

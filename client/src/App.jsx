@@ -45,15 +45,15 @@ function App() {
               </li>
             </ul>
           </nav>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/characters"
-              element={<Characters characters={characters} />}
-            />
-          </Routes>
         </div>
       </header>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/characters"
+          element={<Characters characters={characters} />}
+        />
+      </Routes>
     </>
   );
 }

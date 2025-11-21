@@ -10,6 +10,9 @@
   --color-lav-blue: #535bf2;
   --background-color2: #051936;
   --font-color3: #faffff;
+  --font-color4: #0099cc;
+  --font-color5: #9933ff;
+  --background-color3: #99ccff;
 }
 
 body {
@@ -35,13 +38,11 @@ header {
 
 h1 {
   color: var(--font-color-1);
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
-h2,
-h3,
-h4 {
-  color: var(--color-violet-blue);
+h2 {
+  color: var(--font-color4);
 }
 
 .logo-h1 img {
@@ -62,7 +63,7 @@ h4 {
 
 .nav-div nav ul li a {
   color: var(--color-purple);
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   text-decoration: none;
 }

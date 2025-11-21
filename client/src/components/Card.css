@@ -8,7 +8,8 @@
   flex-flow: column;
 }
 .card:hover {
-  border: thick double var(--font-color3);
+  background-color: var(--background-color3);
+  border: 0.1rem double var(--font-color3);
   font-family: "Updock", cursive;
   font-weight: 400;
   font-style: normal;
@@ -16,8 +17,19 @@
 
 .card h3 {
   text-decoration: underline overline;
+  font-size: 1.7rem;
 }
 
-p {
+.card h4 {
+  font-size: 1.6rem;
+}
+
+.card p {
   color: var(--color-lavender);
+  font-size: 1.5rem;
+}
+
+.card h3,
+h4 {
+  color: var(--font-color5);
 }
