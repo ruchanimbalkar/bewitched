@@ -36,9 +36,13 @@ const getAllCharacters = async () => {
   return data.rows;
 };
 
+// This function fetches characters whose names start with the given value
 const getOneCharacter = async (name) => {
-  const data = await db.query("SELECT * FROM characters WHERE name ILIKE $1%", [
-    name,
+  // We append the SQL wildcard (%) to the name so ILIKE can match prefixes
+  const searchPattern = `${name}%`;
+  // We execute a parameterized SQL query to prevent SQL injection
+  const data = await db.query("SELECT * FROM characters WHERE name ILIKE $1", [
+    searchPattern,
   ]);
   console.log(data.rows);
   return data.rows;
