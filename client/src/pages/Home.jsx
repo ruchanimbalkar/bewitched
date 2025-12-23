@@ -4,10 +4,9 @@ export default function Home() {
       <div className="home-div">
         <h2> Welcome to the fan made website of Bewitched.</h2>
         <p>
-          {" "}
           Bewitched is a beloved show made in the mid 1960s that went for a
           decade. It made people happy and escape their reality. It also made my
-          childhood beautiful.{" "}
+          childhood beautiful.
         </p>
       </div>
 

@@ -15,3 +15,11 @@ main {
   color: var(--font-color-1);
   font-size: 1.3rem;
 }
+
+.search-form label {
+  color: var(--background-color3);
+}
+
+.search-form input {
+  background-color: var(--background-color3);
+}

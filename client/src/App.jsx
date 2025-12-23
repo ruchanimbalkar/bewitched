@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Characters from "./pages/Characters";
+import Serena from "./pages/Serena";
 import "./App.css";
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
               <li>
                 <Link to="/characters">Characters</Link>
               </li>
+              <li>
+                <Link to="/serena">Serena</Link>
+              </li>
             </ul>
           </nav>
         </div>
@@ -53,6 +57,7 @@ function App() {
           path="/characters"
           element={<Characters characters={characters} />}
         />
+        <Route path="/serena" element={<Serena />} />
       </Routes>
     </>
   );

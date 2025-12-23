@@ -36,6 +36,14 @@ const getAllCharacters = async () => {
   return data.rows;
 };
 
+const getOneCharacter = async (name) => {
+  const data = await db.query("SELECT * FROM characters where name = $1", [
+    name,
+  ]);
+  console.log(data.rows);
+  return data.rows;
+};
+
 //API Endpoints
 
 //GET /get-all-characters
@@ -43,5 +51,14 @@ app.get("/get-all-characters", async (req, res) => {
   //Call the helper function
   let characters = await getAllCharacters();
   //Send characters in response JSON format
+  res.json(characters);
+});
+
+//GET /get-one-character/:name
+app.get("/get-one-character/:name", async (req, res) => {
+  //Call the helper function
+  let name = req.params.name;
+  let character = await getOneCharacter(name);
+  //Send character in response JSON format
   res.json(characters);
 });
