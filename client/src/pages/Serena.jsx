@@ -2,6 +2,13 @@ import { useState } from "react";
 export default function Serena() {
   const emptyFormState = { searchTerm: "" };
   const [formData, setFormData] = useState(emptyFormState);
+  const defaultCharacter = {
+    name: "Serena",
+    description:
+      "Serena is Samantha's cousin, who looks like Samantha (also played by Elizabeth Montgomery). Serena is a care-free, strong, independant witch who  loves Samantha but is notorious and gives Darrin hard time",
+  };
+  const [message, setMessage] = useState("");
+  const [character, setCharacter] = useState(defaultCharacter);
   const handleChange = (e) => {
     const { name, value } = e.target;
     //set form data using the setter function setFormData
@@ -25,6 +32,13 @@ export default function Serena() {
       const data = await response.json();
       //print data on console
       console.log("data ", data);
+      if (data.length != 0) {
+        setCharacter({ name: data[0].name, description: data[0].description });
+        setMessage("");
+      } else {
+        setCharacter(defaultCharacter);
+        setMessage("Sorry Character not found!!!");
+      }
     } catch (error) {
       console.log("Error Fetching API: " + error);
     }
@@ -43,13 +57,10 @@ export default function Serena() {
           />
         </search>
       </form>
+      <p>{message}</p>
       <div className="home-div">
-        <h2>Serena</h2>
-        <p>
-          Serena is Samantha's cousin, who looks like Samantha (also played by
-          Elizabeth Montgomery). Serena is a care-free, strong, independant
-          witch who is notorious and gives Darrin hard time.
-        </p>
+        <h2>{character.name}</h2>
+        <p>{character.description}</p>
       </div>
     </main>
   );
