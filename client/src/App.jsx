@@ -18,7 +18,6 @@ function App() {
       console.log("data : ", data);
       console.table(data);
       setCharacters(data);
-      console.log("typeof animalData : ", typeof animalData);
     } catch (error) {
       console.error("Error Fetching API : ", error.message);
     }

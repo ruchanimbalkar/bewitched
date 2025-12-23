@@ -37,7 +37,12 @@ export default function Serena() {
       <form onSubmit={handleSubmit} className="search-form">
         <label htmlFor="search-input">Search Other characters</label>
         <search>
-          <input type="text" id="search-input" onChange={handleChange} />
+          <input
+            type="text"
+            id="search-input"
+            name="searchTerm"
+            onChange={handleChange}
+          />
         </search>
       </form>
       <div className="home-div">
