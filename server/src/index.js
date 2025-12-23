@@ -1,27 +1,11 @@
 import express from "express";
 import pg from "pg";
-// Import the official CORS middleware
-const cors = require("cors");
 
 //connecting to our PostgreSQL database , or db for short
 const db = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: true, // use SSL encryption when connecting to the database to keep data safe in transit
 });
-
-// Enable CORS so browsers can access this API from other origins
-app.use(
-  cors({
-    // Allow requests only from your frontend domain
-    origin: "https://bewitched.netlify.app",
-
-    // Allow standard HTTP methods
-    methods: ["GET", "POST", "PUT", "DELETE"],
-
-    // Allow headers commonly used by fetch
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
 
 //Declare a variable named app and store an instance of express in app
 const app = express();
