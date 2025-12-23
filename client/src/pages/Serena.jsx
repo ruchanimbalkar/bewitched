@@ -1,3 +1,4 @@
+import { useState } from "react";
 export default function Serena() {
   const emptyFormState = { searchTerm: "" };
   const [formData, setFormData] = useState(emptyFormState);
@@ -11,9 +12,11 @@ export default function Serena() {
     console.log("searchTerm", formData.searchTerm);
     let searchWord = formData.searchTerm;
     getCharacter(searchWord);
+    console.log(searchWord);
   };
 
   const getCharacter = async (characterName) => {
+    console.log("getCharacter");
     try {
       const response = await fetch(
         `https://bewitched.onrender.com/get-one-character/${characterName}`
@@ -28,6 +31,7 @@ export default function Serena() {
       console.log("Error Fetching API: " + error);
     }
   };
+
   return (
     <main>
       <form onSubmit={handleSubmit} className="search-form">
