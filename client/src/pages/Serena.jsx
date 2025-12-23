@@ -18,9 +18,7 @@ export default function Serena() {
   const getCharacter = async (characterName) => {
     console.log("getCharacter");
     try {
-      const response = await fetch(
-        `https://bewitched.onrender.com/get-one-character/${characterName}`
-      );
+      const response = await fetch(`api/get-one-character/${characterName}`);
       if (!response.ok) {
         console.error(`Response status: ${response.status}`);
       }
