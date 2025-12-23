@@ -39,7 +39,7 @@ const getAllCharacters = async () => {
 // This function fetches characters whose names start with the given value
 const getOneCharacter = async (name) => {
   // We append the SQL wildcard (%) to the name so ILIKE can match prefixes
-  const searchPattern = `${name}%`;
+  const searchPattern = `%${name}%`;
   // We execute a parameterized SQL query to prevent SQL injection
   const data = await db.query("SELECT * FROM characters WHERE name ILIKE $1", [
     searchPattern,
@@ -64,5 +64,5 @@ app.get("/get-one-character/:name", async (req, res) => {
   let name = req.params.name;
   let character = await getOneCharacter(name);
   //Send character in response JSON format
-  res.json(characters);
+  res.json(character);
 });
