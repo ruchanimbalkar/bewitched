@@ -37,7 +37,7 @@ const getAllCharacters = async () => {
 };
 
 const getOneCharacter = async (name) => {
-  const data = await db.query("SELECT * FROM characters where name = $1", [
+  const data = await db.query("SELECT * FROM characters WHERE name ILIKE $1%", [
     name,
   ]);
   console.log(data.rows);
